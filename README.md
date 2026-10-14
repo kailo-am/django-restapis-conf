@@ -144,6 +144,30 @@ Then open the app in a browser at:
 http://127.0.0.1:8000/
 ```
 
+## Environment Variables
+
+This project expects a `DJANGO_SECRET_KEY` value to be set in the environment. Do not hardcode real secrets in the repository.
+
+Create a `.env` file in the project root (it is already ignored in `.gitignore`):
+
+```env
+DJANGO_SECRET_KEY=your-very-strong-secret-key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+```
+
+For local development, you can also copy the sample file:
+
+```bash
+cp .env.example .env
+```
+
+Then run the app normally:
+
+```bash
+python manage.py runserver
+```
+
 ## Admin Panel
 
 You can access Django's admin panel at:
